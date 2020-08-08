@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Media Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="../dashboard/css/dashboard-styles.css">
+    <link rel="stylesheet" href="../dashboard/switchery.css" />
+    <script src="../dashboard/switchery.js"></script>">
+
 </head>
 <body>
 <!-- -----------------------------------------------------------------------------------------HEADER -->
     <header>
         <h1>Social Media Dashboard</h1>
         <p>Total followers: 23,004</p>
+        <label for="input">
+            Dark mode
+            <input type="checkbox" id="input" class="js-switch" checked>
+            <script>
+                var elem = document.querySelector('.js-switch');
+                var init = new Switchery(elem);
+            </script>
+        </label>
     </header>
 <!-- ------------------------------------------------------------------------------------HEADER ENDS -->
 <!-- -----------------------------------------------------------------------------------MAIN CONTENT -->
@@ -30,6 +41,42 @@
                         <caption>12 today</caption>
                     </figure>
             </div>
+            <div class="media-container" id="twitter">
+                <figure class="social-network">
+                    <img src="../dashboard/images/icons/icon-twitter.svg" alt="">
+                    <caption>@nathanf</caption>
+                </figure>
+                <h2>1044</h2>
+                <p>followers</p>
+                <figure class="followers-counter">
+                    <img src="../dashboard/images/icons/icon-up.svg" alt="">
+                    <caption>99 today</caption>
+                </figure>
+            </div>
+            <div class="media-container" id="instagram">
+                <figure class="social-network">
+                    <img src="../dashboard/images/icons/icon-instagram.svg" alt="">
+                    <caption>@realnathanf</caption>
+                </figure>
+                <h2>11k</h2>
+                <p>followers</p>
+                <figure class="followers-counter">
+                    <img src="../dashboard/images/icons/icon-up.svg" alt="">
+                    <caption>1099 today</caption>
+                </figure>
+            </div>
+            <div class="media-container" id="youtube">
+                <figure class="social-network">
+                    <img src="../dashboard/images/icons/icon-youtube.svg" alt="">
+                    <caption>Nathan F.</caption>
+                </figure>
+                <h2>8239</h2>
+                <p>followers</p>
+                <figure class="followers-counter">
+                    <img src="../dashboard/images/icons/icon-down.svg" alt="">
+                    <caption>144 today</caption>
+                </figure>
+            </div>
             
         </section>
 <!-- --------------------------------------------------------------------SOCIAL MEDIA CONTAINERS ENDS -->
@@ -46,6 +93,69 @@
                 <div class="arrow-percentage">
                     <img src="../dashboard/images/icons/icon-up.svg" alt="" class="arrow">
                     <p class="percentage">2%</p>
+                </div>
+            </div>
+            <div class="overview-container" id="facebook-2">
+                <p class="page-status">Likes</p>
+                <img src="../dashboard/images/icons/icon-facebook.svg" alt="" class="social-icon">
+                <h2>52</h2>
+                <div class="arrow-percentage">
+                    <img src="../dashboard/images/icons/icon-down.svg" alt="" class="arrow">
+                    <p class="percentage">2%</p>
+                </div>
+            </div>
+            <div class="overview-container" id="instagram-2">
+                <p class="page-status">Likes</p>
+                <img src="../dashboard/images/icons/icon-instagram.svg" alt="" class="social-icon">
+                <h2>5452</h2>
+                <div class="arrow-percentage">
+                    <img src="../dashboard/images/icons/icon-up.svg" alt="" class="arrow">
+                    <p class="percentage">2257%</p>
+                </div>
+            </div>
+            <div class="overview-container" id="instagram-2">
+                <p class="page-status">Profile views</p>
+                <img src="../dashboard/images/icons/icon-instagram.svg" alt="" class="social-icon">
+                <h2>52k</h2>
+                <div class="arrow-percentage">
+                    <img src="../dashboard/images/icons/icon-up.svg" alt="" class="arrow">
+                    <p class="percentage">1375%</p>
+                </div>
+            </div>
+            <div class="overview-container" id="twitter-2.1">
+                <p class="page-status">Retweets</p>
+                <img src="../dashboard/images/icons/icon-twitter.svg" alt="" class="social-icon">
+                <h2>117</h2>
+                <div class="arrow-percentage">
+                    <img src="../dashboard/images/icons/icon-up.svg" alt="" class="arrow">
+                    <p class="percentage">303%</p>
+                </div>
+            </div>
+            <div class="overview-container" id="twitter-2.2">
+                <p class="page-status">Likes</p>
+                <img src="../dashboard/images/icons/icon-twitter.svg" alt="" class="social-icon">
+                <h2>507</h2>
+                <div class="arrow-percentage">
+                    <img src="../dashboard/images/icons/icon-up.svg" alt="" class="arrow">
+                    <p class="percentage">553%</p>
+                </div>
+            </div>
+            <div class="overview-container" id="youtube-2">
+                <p class="page-status">Likes</p>
+                <img src="../dashboard/images/icons/icon-youtube.svg" alt="" class="social-icon">
+                <h2>107</h2>
+                <div class="arrow-percentage">
+                    <img src="../dashboard/images/icons/icon-down.svg" alt="" class="arrow">
+                    <p class="percentage">19%</p>
+                </div>
+            </div>
+            <div class="overview-container" id="youtube-2">
+                <p class="page-status">Total Views</p>
+                <img src="../dashboard/images/icons/icon-youtube.svg" alt="" class="social-icon">
+                <h2>1407</h2>
+                <div class="arrow-percentage">
+                    <img src="../dashboard/images/icons/icon-down.svg" alt="" class="arrow">
+                    <p class="percentage">12%</p>
                 </div>
             </div>
 
