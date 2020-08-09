@@ -4,25 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Media Dashboard</title>
+    <link rel="shortcut icon" href="../dashboard/images/icons/favicon-32x32.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../dashboard/css/dashboard-styles.css">
-    <link rel="stylesheet" href="../dashboard/switchery.css" />
-    <script src="../dashboard/switchery.js"></script>">
-
 </head>
 <body>
 <!-- -----------------------------------------------------------------------------------------HEADER -->
     <header>
         <h1>Social Media Dashboard</h1>
         <p>Total followers: 23,004</p>
-        <label for="input">
-            Dark mode
-            <input type="checkbox" id="input" class="js-switch" checked>
-            <script>
-                var elem = document.querySelector('.js-switch');
-                var init = new Switchery(elem);
-            </script>
-        </label>
+        <input type="checkbox" id="toggle" class="toggle-button"/>
+        <label for="toggle"></label>
+        
+        
     </header>
 <!-- ------------------------------------------------------------------------------------HEADER ENDS -->
 <!-- -----------------------------------------------------------------------------------MAIN CONTENT -->
