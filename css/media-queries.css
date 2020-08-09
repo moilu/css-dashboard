@@ -1,0 +1,38 @@
+@media (max-width: 900px) {
+
+    .toggle-button + label {
+        grid-column: 2;
+        grid-row: 2;
+        align-self: flex-end;
+    }    
+    .social-media-totals {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        margin-left: 50px;
+        margin-right: 50px;
+        width: 100%;
+    }
+    .media-container{
+        grid-row: 1;
+        grid-column: 1;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+    
+    #twitter {
+        border-top: 5px var(--twitter-color) solid;
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #instagram {
+        border-top: 5px var(--instagram-color) solid;
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #youtube {
+        color: red;
+        grid-column: 1;
+        grid-row: 4;
+    }
+}
