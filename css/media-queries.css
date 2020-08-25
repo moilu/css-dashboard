@@ -66,3 +66,10 @@
         width: 100%;
     }
 }
+
+@media (input:checked) {
+    header{
+        background-color: hsl(232, 19%, 15%);
+        
+    }
+}
