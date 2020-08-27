@@ -7,7 +7,7 @@
     }
 
     main {
-        margin: 60px;
+        margin: 0;
     } 
 
     header h1 {
@@ -37,9 +37,9 @@
     .media-container{
         grid-row: 1;
         grid-column: 1;
-        margin-left: 5px;
-        margin-right: 5px;
-        margin-bottom: 10px;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 20px;
     }
     
     #twitter {
@@ -66,9 +66,14 @@
         width: 100%;
     }
 
+    .overview-container {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
     .switch, .switch-label {
         position: absolute;
-        top: 140px;
+        top: 148px;
         right: 1px;
         z-index: 1;
     }
@@ -89,10 +94,14 @@
 
     .switch, .switch-label{
         position: absolute;
-        top: 113px;
+        top: 110px;
         right: 95px;
         z-index: 1;
 
+    }
+
+    .social-media-totals {
+        margin-right: 80px;
     }
 }
 
@@ -100,10 +109,18 @@
 
     .switch, .switch-label{
         position: absolute;
-        top: 113px;
-        right: 159px;
+        top: 138px;
+        right: 90px;
         z-index: 1;
 
+    }
+
+    .social-media-overview {
+        margin-right: 80px;
+    }
+
+    .container  p {
+        margin-right: 15px;
     }
 }
 
@@ -112,7 +129,7 @@
     .switch, .switch-label{
         position: absolute;
         top: 140px;
-        right: 175px;
+        right: 95px;
         z-index: 1;
 
     }
@@ -123,10 +140,19 @@
     .switch, .switch-label{
         position: absolute;
         top: 140px;
-        right: 450px;
+        right: 420px;
         z-index: 1;
 
     }
+
+    .social-media-totals {
+        margin-right: 400px;
+        margin-left: 400px;
+    }
+
+    .social-media-overview {
+        margin-right: 400px;
+        margin-left: 400px;
 }
 
 
