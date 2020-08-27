@@ -5,7 +5,7 @@
 
     --facebook-color:  hsl(203, 89%, 53%);
     --twitter-color: hsl(195, 100%, 50%);
-    --instagram-color: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+    --instagram-color: hsl(37, 97%, 70%), hsl(329, 70%, 58%);
     --youtube-color: hsl(348, 97%, 39%);
 /* Light theme colors */
     --card-gray-color: hsl(227, 47%, 96%);
@@ -14,7 +14,7 @@
     --text-dark-gray: hsl(228, 12%, 44%);
     --text-very-dark-gray: hsl(230, 17%, 14%);
     /* Toggle light theme*/
-    --light-button-color: hsl(230, 22%, 74%);
+    --light-button-color: hsl(227, 47%, 96%);
 /* Dark theme colors */
     --card-dark-blue: hsl(228, 28%, 20%);
     --header-dark-blue: hsl(232, 19%, 15%);
@@ -22,7 +22,7 @@
     --text-desaturated-blue: hsl(228, 34%, 66%);
     --text-white: hsl(0, 0%, 100%);
     /* Toggle dark theme */
-    --dark-button-color: hsl(210, 78%, 56%), hsl(146, 68%, 55%);
+    --dark-button-color: hsl(0, 0%, 79%), hsl(227, 47%, 96%) ;
 }
 /*---------------------------------------------------------------------------------------- VARIABLES ENDS*/
 /*---------------------------------------------------------------------------------------- GLOBAL STYLES */
@@ -50,7 +50,12 @@ main {
     width: 50px;
     height: 5px;
     border-radius: 50px;
+    border: 1px solid;
     background-image: linear-gradient(to right, var(--dark-button-color));
+}
+
+.switch:checked ~ .switch-label {
+    --dark-button-color: hsl(210, 78%, 56%), hsl(146, 68%, 55%);
 }
 
 .switch-label span {
@@ -177,7 +182,9 @@ header h1 {
 }
 
 #instagram {
-    border-top: 5px solid linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    border-top: 5px solid transparent;
+    border-image: linear-gradient(to right, var(--instagram-color));
+    border-image-slice: 1;
     grid-column: auto;
 }
 
