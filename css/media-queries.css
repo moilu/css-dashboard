@@ -65,11 +65,70 @@
         margin: 0;
         width: 100%;
     }
-}
 
-@media (input:checked) {
-    header{
-        background-color: hsl(232, 19%, 15%);
-        
+    .switch, .switch-label {
+        position: absolute;
+        top: 140px;
+        right: 1px;
+        z-index: 1;
     }
 }
+
+@media (min-width: 425px) {
+
+    .switch, .switch-label{
+        position: absolute;
+        top: 110px;
+        right: 1px;
+        z-index: 1;
+
+    }
+}
+
+@media (min-width: 768px) {
+
+    .switch, .switch-label{
+        position: absolute;
+        top: 113px;
+        right: 95px;
+        z-index: 1;
+
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .switch, .switch-label{
+        position: absolute;
+        top: 113px;
+        right: 159px;
+        z-index: 1;
+
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .switch, .switch-label{
+        position: absolute;
+        top: 140px;
+        right: 175px;
+        z-index: 1;
+
+    }
+}
+
+@media (min-width: 2560px) {
+
+    .switch, .switch-label{
+        position: absolute;
+        top: 140px;
+        right: 450px;
+        z-index: 1;
+
+    }
+}
+
+
+
+

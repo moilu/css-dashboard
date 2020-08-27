@@ -10,7 +10,7 @@
 /* Light theme colors */
     --card-gray-color: hsl(227, 47%, 96%);
     --header-gray-color: hsl(225, 100%, 98%);
-    --background-white: hsl(0, 0%, 100%));
+    --background-white: hsl(0, 0%, 100%);
     --text-dark-gray: hsl(228, 12%, 44%);
     --text-very-dark-gray: hsl(230, 17%, 14%);
     /* Toggle light theme*/
@@ -22,7 +22,7 @@
     --text-desaturated-blue: hsl(228, 34%, 66%);
     --text-white: hsl(0, 0%, 100%);
     /* Toggle dark theme */
-    --dark-button-color: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+    --dark-button-color: hsl(210, 78%, 56%), hsl(146, 68%, 55%);
 }
 /*---------------------------------------------------------------------------------------- VARIABLES ENDS*/
 /*---------------------------------------------------------------------------------------- GLOBAL STYLES */
@@ -30,7 +30,62 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto mono', Arial, Helvetica, sans-serif;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background-white);
+}
+
+main {
+    background-color: var(--background-white);
+}
+
+/* Estilos boton*/
+.switch, .switch-label {
+    position: absolute;
+    top: 140px;
+    right: 158px;
+    z-index: 1;
+}
+
+.switch-label {
+    padding: 13px;
+    width: 50px;
+    height: 5px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, var(--dark-button-color));
+}
+
+.switch-label span {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    width: 100%;
+    left: 20px;
+}
+
+.switch-label span::after{
+    position: absolute;
+    top: calc(100% + 15px);
+    left: -15px;
+    width: 20px;
+    height: 20px;
+    content: "";
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 200ms, background-color 200ms;
+    box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.switch:checked ~ .switch-label span::after{
+    transform: translateX(47px);
+}
+
+.switch:checked ~ header {
+    --header-gray-color: hsl(232, 19%, 15%);
+    --text-very-dark-gray: white;
+}
+
+.switch:checked ~ main{
+    --background-white: hsl(232, 19%, 15%);
+    --text-very-dark-gray: white;
+    --card-gray-color: hsl(228, 28%, 20%);
 }
 
 
@@ -48,6 +103,7 @@ header h1 {
     grid-column-start: 2;
     grid-row-start: 1;
     padding-top: 50px;
+    color: var(--text-very-dark-gray);
 }
 
 .container {
@@ -59,58 +115,8 @@ header h1 {
 }
 
 .container  p {
-    color: hsl(228, 12%, 44%);
+    color: var(--text-very-dark-gray);
 }
-
-.toggle input[type='checkbox'] {
-    display: none;
-}
-
-.toggle {
-    align-self: center;
-}
-
-.toggle p {
-    margin-bottom: 0;
-    margin-right: 5px;
-}
-
-.toggle label {
-    background-color: hsl(230, 22%, 74%);
-    border: 2px solid hsl(227, 47%, 96%);
-    border-radius: 50px;
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: all ease-in-out 0.3s;
-    width: 50px;
-    height: 25px;
-}
-
-.toggle label::after {
-    background-color: #555;
-    border-radius: 50%;
-    content: ' ';
-    cursor: pointer;
-    display: inline-block;
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    transition: all ease-in-out 0.3s;
-    width: 21px;
-    height: 21px;
-}
-
-.toggle input[type='checkbox']:checked ~ label {
-    background-color: #00a0fc;
-    border-color: #006dc9;
-}
-
-.toggle input[type='checkbox']:checked ~ label::after {
-    background-color: #0054b0;
-    transform: translateX(25px);
-}
-
 
 /* -----------------------------------------------------------------------------------------HEADER END*/
 /* ----------------------------------------------------------------------SOCIAL MEDIA CONTAINERS START*/
@@ -126,6 +132,7 @@ header h1 {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     border-radius: 5px;
     background-color: var(--card-gray-color);
+    color: var(--text-very-dark-gray);
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -186,15 +193,21 @@ header h1 {
 /* ----------------------------------------------------------------------SOCIAL MEDIA CONTAINERS ENDS*/
 /* --------------------------------------------------------------------------------- OVERVIEW STARTS */
 
+.switch:checked ~ #overview-header {
+    --text-very-dark-gray: hsl(228, 34%, 66%);
+}
+
 #overview-header {
     margin: 0;
     display: grid;
     grid-template-columns: 1fr 400px repeat(3,1fr);
     font-size: 14px;
+    color: var(--text-very-dark-gray);
 }
 
 #overview-header h1 {
     grid-column: 2;
+   
 }
 
 .social-media-overview {
@@ -208,12 +221,13 @@ header h1 {
 .social-media-overview .overview-container {
     grid-column: auto;
     border-radius: 5px;
-    background-color: var(--card-gray-color);
     margin-top: 20px;
 }
 /* ---------------------------------------------------------------------------------Container */
 .overview-container {
     display: grid;
+    background-color: var(--card-gray-color);
+    color: var(--text-very-dark-gray);
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
